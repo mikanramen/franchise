@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小柑橘 ｜ 品牌六大核心戰略 (The 6 Pillars)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --orange: #FF6B00;
+  --bg: #080604;
+  --card-bg: #130F09;
+  --white: #F7F3EE;
+  --muted: #887A68;
+  --line: rgba(255,200,120,0.08);
+  --serif: 'Noto Serif TC', serif;
+  --sans: "PingFang TC", "Noto Sans TC", sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--white);
+  font-family:var(--sans);-webkit-font-smoothing:antialiased;
+  overflow-x:hidden;line-height:1.7;
+}
+body::before{
+  content:"";position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:0;opacity:0.5;
+}
+.page{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:6rem 4% 8rem}
+
+/* ── HEADER ── */
+.page-header{text-align:center;margin-bottom:6rem}
+.eyebrow{
+  display:inline-block;
+  font-size:0.75rem;letter-spacing:0.35em;text-transform:uppercase;
+  color:var(--orange);font-weight:700;
+  padding:0.4rem 1.2rem;
+  border:1px solid rgba(255,107,0,0.3);border-radius:2px;
+  background:rgba(255,107,0,0.08);margin-bottom:1.8rem;
+}
+.page-title{
+  font-family:var(--serif);
+  font-size:clamp(2rem,4vw,3.2rem);
+  font-weight:900;letter-spacing:0.05em;line-height:1.3;margin-bottom:1.2rem;
+}
+.page-title em{color:var(--orange);font-style:normal}
+.page-desc{color:var(--muted);font-size:1rem;letter-spacing:0.05em;max-width:650px;margin:0 auto;line-height:1.8}
+
+/* ── GRID ── */
+.grid{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:1.5px;background:var(--line);
+  border:1px solid var(--line);border-radius:4px;overflow:hidden;
+}
+
+/* ── PILLAR CARD ── */
+.pillar{
+  background:var(--card-bg);padding:3.5rem 3rem;
+  position:relative;display:flex;flex-direction:column;
+  opacity:0;transform:translateY(30px);
+  transition:opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),background 0.4s;
+}
+.pillar.visible{opacity:1;transform:translateY(0)}
+.pillar:hover{background:#1A130A}
+.pillar::before{
+  content:"";position:absolute;top:0;left:0;
+  width:40px;height:40px;
+  border-top:2px solid rgba(255,107,0,0.5);
+  border-left:2px solid rgba(255,107,0,0.5);
+  pointer-events:none;
+}
+.pillar:nth-child(1){transition-delay:0s}
+.pillar:nth-child(2){transition-delay:0.1s}
+.pillar:nth-child(3){transition-delay:0.2s}
+.pillar:nth-child(4){transition-delay:0.3s}
+.pillar:nth-child(5){transition-delay:0.4s}
+.pillar:nth-child(6){transition-delay:0.5s}
+
+/* ── LOGO 魔法處理 (白底轉透明純白 LOGO) ── */
+.pillar-logo {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 2rem;
+  object-fit: contain;
+  /* 反轉顏色：黑變白，白變黑 */
+  filter: invert(1) brightness(1.2);
+  /* 螢幕濾色：濾掉黑色背景，只保留白色 LOGO */
+  mix-blend-mode: screen;
+  opacity: 0.8;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform-origin: left center;
+}
+.pillar:hover .pillar-logo {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* ── LABEL & TITLE ── */
+.pillar-label{
+  font-size:0.7rem;letter-spacing:0.3em;text-transform:uppercase;
+  color:var(--orange);font-weight:700;margin-bottom:0.5rem;opacity:0.8;
+}
+.pillar-title{
+  font-family:var(--serif);font-size:1.8rem;font-weight:900;
+  letter-spacing:0.06em;line-height:1.2;margin-bottom:1.5rem;color:var(--white);
+}
+.pillar-div{
+  width:40px;height:3px;
+  background:linear-gradient(to right,var(--orange),transparent);
+  margin-bottom:1.8rem;border-radius:2px;
+}
+
+/* ── POINTS ── */
+.pillar-points{display:flex;flex-direction:column;gap:1.2rem}
+.point{display:flex;gap:1rem;align-items:flex-start}
+.point-hash{
+  color:var(--orange);font-size:0.8rem;font-weight:900;
+  margin-top:0.2rem;flex-shrink:0;letter-spacing:0.05em;
+}
+.point-text{font-size:0.95rem;color:#C4B6A6;line-height:1.8;letter-spacing:0.03em}
+.point-text strong{color:#FFFFFF;font-weight:700}
+
+/* ── CONNECTOR ── */
+.connector{
+  text-align:center;margin-top:5rem;
+  display:flex;flex-direction:column;align-items:center;gap:1rem;
+  color:var(--muted);font-size:0.8rem;letter-spacing:0.25em;text-transform:uppercase;
+}
+.conn-line{width:1px;height:60px;background:linear-gradient(to bottom,var(--orange),transparent)}
+
+@media(max-width:768px){
+  .grid{grid-template-columns:1fr}
+  .page{padding:4rem 5% 6rem}
+  .pillar{padding:2.5rem 2rem}
+  .page-title{font-size: 2.2rem;}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="page-header">
+    <div class="eyebrow">The Business Blueprint</div>
+    <h1 class="page-title">六大戰略核心<em>，</em>構築堅不可摧的品牌護城河</h1>
+    <p class="page-desc">這不只是一碗拉麵的配方，這是一套經過市場淬鍊、陪伴您穩健獲利的商業飛輪。從顛覆味蕾到夥伴共好，我們為您的成功鋪路。</p>
+  </div>
+
+  <div class="grid">
+
+    <div class="pillar">
+      <div class="pillar-label">01 · PRODUCT</div>
+      <h2 class="pillar-title">產品魅力</h2>
+      <div class="pillar-div"></div>
+      <div class="pillar-points">
+        <div class="point"><span class="point-hash">/</span><p class="point-text">獨創溫潤清新的<strong>「果香系拉麵」</strong>，用一碗麵的溫度，在顧客心中留下難以取代的味覺記憶。</p></div>
+        <div class="point"><span class="point-hash">/</span><p class="point-text">在同質化競爭的市場中，以極高的<strong>品牌辨識度</strong>強勢突圍，讓您的店成為街角最讓人想念的風景。</p></div>
+      </div>
+    </div>
+
+    <div class="pillar">
+      <div class="pillar-label">02 · MARKETING</div>
+      <h2 class="pillar-title">品牌共鳴</h2>
+      <div class="pillar-div"></div>
+      <div class="pillar-points">
+        <div class="point"><span class="point-hash">/</span><p class="point-text">我們不喊空洞的口號，而是透過真誠的社群互動與口碑，讓顧客自然成為品牌的<strong>最佳代言人</strong>。</p></div>
+        <div class="point"><span class="point-hash">/</span><p class="point-text">總部為您精準串聯網紅與媒體聲量，帶來源源不絕的客流，讓您能專注於<strong>款待每一位客人</strong>。</p></div>
+      </div>
+    </div>
+
+    <div class="pillar">
+      <div class="pillar-label">03 · EXPERIENCE</div>
+      <h2 class="pillar-title">顧客體驗</h2>
+      <div class="pillar-div"></div>
+      <div class="pillar-points">
+        <div class="point"><span class="point-hash">/</span><p class="point-text">掌握現代人喜愛分享的心，用高顏值的擺盤與細緻的服務，讓每一次用餐都成為顧客<strong>樂於打卡的日常</strong>。</p></div>
+        <div class="point"><span class="point-hash">/</span><p class="point-text">將模糊的消費轉化為深刻的體驗，讓口碑在年輕與女性客群中自然發酵，<strong>客源穩定成長</strong>。</p></div>
+      </div>
+    </div>
+
+    <div class="pillar">
+      <div class="pillar-label">04 · SYSTEM</div>
+      <h2 class="pillar-title">數位賦能</h2>
+      <div class="pillar-div"></div>
+      <div class="pillar-points">
+        <div class="point"><span class="point-hash">/</span><p class="point-text">導入好上手的智慧化 <strong>CRM 顧客關係管理系統</strong>，幫您記住每一位熟客的專屬喜好。</p></div>
+        <div class="point"><span class="point-hash">/</span><p class="point-text">用科技輔助人情味，透過點數回饋與專屬自動化行銷，讓經營更有效率，<strong>輕鬆拉近與顧客的距離</strong>。</p></div>
+      </div>
+    </div>
+
+    <div class="pillar">
+      <div class="pillar-label">05 · QUALITY</div>
+      <h2 class="pillar-title">品質承諾</h2>
+      <div class="pillar-div"></div>
+      <div class="pillar-points">
+        <div class="point"><span class="point-hash">/</span><p class="point-text">嚴選日本進口食材，透過中央廚房「黑盒子」配送，為您<strong>把關最繁瑣的細節</strong>。</p></div>
+        <div class="point"><span class="point-hash">/</span><p class="point-text">您不需要在後廚揮汗如雨地熬湯，極簡 SOP 讓您只需專注於為顧客端上<strong>完美標準的每一碗</strong>。</p></div>
+      </div>
+    </div>
+
+    <div class="pillar">
+      <div class="pillar-label">06 · PARTNERSHIP</div>
+      <h2 class="pillar-title">夥伴共好</h2>
+      <div class="pillar-div"></div>
+      <div class="pillar-points">
+        <div class="point"><span class="point-hash">/</span><p class="point-text">您不是孤軍奮戰的加盟主，而是我們<strong>珍視的事業合夥人</strong>。從選址、設計到實戰培訓，總部肩負當責使命。</p></div>
+        <div class="point"><span class="point-hash">/</span><p class="point-text">完善的去職人化系統與堅強後盾，讓即使是<strong>零經驗的您</strong>，也能安心圓夢，穩健獲利。</p></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="connector">
+    <div class="conn-line"></div>
+    <span>以上六大核心，構成小柑橘不可複製的商業底層邏輯</span>
+  </div>
+
+</div>
+
+<script>
+const pillars = document.querySelectorAll('.pillar');
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible')}});
+},{threshold:0.12});
+pillars.forEach(p=>obs.observe(p));
+</script>
+</body>
+</html>
