@@ -14,7 +14,7 @@
             font-family: 'Noto Sans TC', sans-serif; 
             background-color: #f8fafc; 
             color: #1e293b;
-            line-height: 1.6;
+            line-height: 1.7;
             padding: 40px 20px;
         }
 
@@ -36,22 +36,24 @@
             position: relative;
         }
         
-        .faq-header i {
-            font-size: 48px;
-            margin-bottom: 15px;
-            opacity: 0.9;
+        .faq-header img {
+            max-width: 160px;
+            height: auto;
+            margin-bottom: 25px;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
         }
 
         .faq-header h1 {
-            font-size: 36px;
+            font-size: 32px;
             font-weight: 900;
             letter-spacing: 2px;
+            margin-bottom: 10px;
         }
 
         .faq-header p {
-            font-size: 18px;
-            opacity: 0.8;
-            margin-top: 10px;
+            font-size: 17px;
+            opacity: 0.9;
+            font-weight: 500;
         }
 
         /* 內容區塊 */
@@ -60,18 +62,17 @@
         }
 
         .category-title {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 900;
             color: #f97316;
-            margin: 30px 0 15px 0;
-            padding-bottom: 10px;
+            margin: 35px 0 15px 0;
+            padding-bottom: 12px;
             border-bottom: 2px solid #fed7aa;
             display: flex;
             align-items: center;
         }
         
-        .category-title i { margin-right: 12px; }
-
+        .category-title i { margin-right: 12px; font-size: 22px; }
         .category-title:first-child { margin-top: 0; }
 
         /* 摺疊選單設計 */
@@ -85,20 +86,21 @@
 
         .accordion-item.active {
             border-color: #f97316;
-            box-shadow: 0 10px 20px rgba(249, 115, 22, 0.05);
+            box-shadow: 0 10px 20px rgba(249, 115, 22, 0.06);
         }
 
         .accordion-header {
             background: #ffffff;
-            padding: 20px 25px;
+            padding: 22px 25px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 700;
             color: #334155;
             transition: background 0.3s ease;
+            line-height: 1.4;
         }
 
         .accordion-header:hover { background: #fffaf1; }
@@ -112,6 +114,8 @@
             font-size: 16px;
             color: #f97316;
             transition: transform 0.3s ease;
+            flex-shrink: 0;
+            margin-left: 15px;
         }
 
         .accordion-item.active .icon-toggle {
@@ -126,17 +130,19 @@
         }
 
         .accordion-item.active .accordion-body {
-            max-height: 500px; /* 足夠大的高度以展開內容 */
+            max-height: 600px;
         }
 
         .accordion-content {
             padding: 0 25px 25px 25px;
-            font-size: 17px;
+            font-size: 16px;
             color: #475569;
         }
 
         .accordion-content strong {
-            color: #1e293b;
+            color: #ea580c;
+            font-weight: 900;
+            margin-right: 5px;
         }
 
         .highlight-text {
@@ -147,9 +153,10 @@
         /* RWD 手機版微調 */
         @media (max-width: 600px) {
             .faq-header { padding: 40px 20px; }
-            .faq-header h1 { font-size: 28px; }
+            .faq-header h1 { font-size: 26px; }
+            .faq-header img { max-width: 130px; }
             .faq-content { padding: 20px; }
-            .accordion-header { font-size: 16px; padding: 15px 20px; }
+            .accordion-header { font-size: 16px; padding: 18px 20px; }
             .accordion-content { font-size: 15px; padding: 0 20px 20px 20px; }
         }
     </style>
@@ -158,151 +165,150 @@
 
     <div class="faq-container">
         <div class="faq-header">
-            <i class="fa-solid fa-comments"></i>
-            <h1>小柑橘拉麵 ｜ 加盟常見 Q&A</h1>
-            <p>為您解答創業路上的所有疑問</p>
+            <h1>加盟常見 Q&A</h1>
+            <p>與您並肩，解答創業路上的每一分忐忑</p>
         </div>
 
         <div class="faq-content">
 
-            <div class="category-title"><i class="fa-solid fa-user-tie"></i> 一、 加盟條件與資格</div>
+            <div class="category-title"><i class="fa-solid fa-handshake-angle"></i> 一、 攜手起步：條件與資格</div>
             
             <div class="accordion-item">
                 <div class="accordion-header">
-                    Q1：我完全沒有餐飲經驗，也可以加盟嗎？
+                    Q1：我完全沒有餐飲經驗，也可以成為夥伴嗎？
                     <i class="fa-solid fa-chevron-down icon-toggle"></i>
                 </div>
                 <div class="accordion-body">
                     <div class="accordion-content">
-                        <strong>A：</strong> 絕對可以！小柑橘的核心優勢就是<span class="highlight-text">「極簡去職人化 SOP」</span>。總部擁有完善的中央廚房與標準化作業流程，不需依賴高薪職人。只要您具備強大的執行力與學習熱忱，配合總部的密集實戰培訓，無經驗也能輕鬆上手、端出職人級美味。
+                        <strong>A：</strong> 我們深知跨足新領域的忐忑。透過總部當責的支援與完善的「去職人化 SOP」，我們已將複雜的技術化為精準的標準流程。只要您具備強大的執行力與熱忱，零經驗也能與我們一起端出令人感動的職人級美味。
                     </div>
                 </div>
             </div>
 
             <div class="accordion-item">
                 <div class="accordion-header">
-                    Q2：請問加盟小柑橘需要全職投入經營嗎？
+                    Q2：請問加盟小柑橘，初期需要全職投入經營嗎？
                     <i class="fa-solid fa-chevron-down icon-toggle"></i>
                 </div>
                 <div class="accordion-body">
                     <div class="accordion-content">
-                        <strong>A：</strong> 創業初期，我們強烈建議加盟主（或指定的專職店長）必須全心投入店鋪的日常營運。親自掌握現場狀況與服務品質，是達成<span class="highlight-text">「最快 11.7 個月回本」</span>的最關鍵要素。
+                        <strong>A：</strong> 創業是一場全心投入的旅程。在打基礎的初期，我們非常建議您親自參與營運，感受品牌的脈動與顧客的微笑。這不僅能幫助您最快掌握現場狀況，更是建立團隊向心力與達成快速回本最關鍵的一步。
                     </div>
                 </div>
             </div>
 
-            <div class="category-title"><i class="fa-solid fa-sack-dollar"></i> 二、 資金與費用明細</div>
+            <div class="category-title"><i class="fa-solid fa-seedling"></i> 二、 灌溉夢想：資金與後盾</div>
 
             <div class="accordion-item">
                 <div class="accordion-header">
-                    Q3：準備資金大概需要多少？
+                    Q3：實現這個藍圖，大概需要準備多少資金？
                     <i class="fa-solid fa-chevron-down icon-toggle"></i>
                 </div>
                 <div class="accordion-body">
                     <div class="accordion-content">
-                        <strong>A：</strong> 開辦一間小柑橘的初期總投資金額約落於 <span class="highlight-text">$290萬 ~ $350萬</span> 之間。這已包含加盟金、教育訓練、裝潢工程、冷氣靜電設備、內場生財器具及首批物料。我們會依據您實際租賃的店面坪數（建議至少 15-20 坪）進行最精準的費用評估。
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <div class="accordion-header">
-                    Q4：初期資金不足，總部有提供貸款協助嗎？
-                    <i class="fa-solid fa-chevron-down icon-toggle"></i>
-                </div>
-                <div class="accordion-body">
-                    <div class="accordion-content">
-                        <strong>A：</strong> 有的。我們與<span class="highlight-text">官股銀行</span>合作推出加盟主專屬的企業融資專案，提供優惠利率且核貸快速，大幅減輕您初期的資金壓力，讓您能將資金做更靈活的運用。
+                        <strong>A：</strong> 開辦一間小柑橘的初期總投資約落於 <span class="highlight-text">$290萬 ~ $350萬</span> 之間。這不僅是一筆預算，更是您夢想的啟動金。包含加盟金、教育訓練、裝潢工程與生財設備等，我們會在每個環節為您精打細算，確保每一分錢都為您創造最大的商業價值。
                     </div>
                 </div>
             </div>
 
             <div class="accordion-item">
                 <div class="accordion-header">
-                    Q5：合約期限是多久？期滿後續約還要再付加盟金嗎？
+                    Q4：若初期資金有缺口，總部有提供相關協助嗎？
                     <i class="fa-solid fa-chevron-down icon-toggle"></i>
                 </div>
                 <div class="accordion-body">
                     <div class="accordion-content">
-                        <strong>A：</strong> 合約為期 3 年。為了與加盟主建立長遠的夥伴關係，只要合約期間營運評鑑合格，三年期滿續約<span class="highlight-text">「免收加盟金」</span>，讓您未來的利潤空間更大。
-                    </div>
-                </div>
-            </div>
-
-            <div class="category-title"><i class="fa-solid fa-store"></i> 三、 店鋪與商圈保障</div>
-
-            <div class="accordion-item">
-                <div class="accordion-header">
-                    Q6：店面是總部幫忙找，還是我自己找？
-                    <i class="fa-solid fa-chevron-down icon-toggle"></i>
-                </div>
-                <div class="accordion-body">
-                    <div class="accordion-content">
-                        <strong>A：</strong> 雙管齊下。您可以提出屬意的商圈或具體店面，總部專業團隊會為您進行「商圈人流、立地條件與租金效益」的科學化評估；同時，總部也會將手上評估過適合開發的優質店面優先推薦給您。
+                        <strong>A：</strong> 我們願意成為您逐夢路上的堅強後盾。總部特別與官股銀行攜手，提供專屬的企業融資專案。透過更優惠的利率與快速的審核，我們希望能為您減輕初期的資金壓力，讓您能無後顧之憂地展開這份事業。
                     </div>
                 </div>
             </div>
 
             <div class="accordion-item">
                 <div class="accordion-header">
-                    Q7：如果我開店了，總部會不會在我附近又開一家？
+                    Q5：合約期滿後，續約還需要再繳交加盟金嗎？
                     <i class="fa-solid fa-chevron-down icon-toggle"></i>
                 </div>
                 <div class="accordion-body">
                     <div class="accordion-content">
-                        <strong>A：</strong> 絕對不會！我們嚴格落實「一行政區僅一店」的區域獨佔保障制度，<span class="highlight-text">白紙黑字在「加盟合約」內</span>。我們拒絕品牌內部互搶客源的惡性競爭，將該區域的商機與利潤 100% 留給您。
+                        <strong>A：</strong> 我們渴望建立的是長遠共好的夥伴關係。三年合約期滿後，只要營運品質符合品牌標準，我們承諾續約<span class="highlight-text">「免收加盟金」</span>。因為對我們來說，您的持續成功，才是品牌真正的成功。
                     </div>
                 </div>
             </div>
 
-            <div class="category-title"><i class="fa-solid fa-chalkboard-user"></i> 四、 培訓與營運支援</div>
+            <div class="category-title"><i class="fa-solid fa-map-location-dot"></i> 三、 穩紮穩打：店鋪與保障</div>
 
             <div class="accordion-item">
                 <div class="accordion-header">
-                    Q8：開幕前會有教育訓練嗎？時間多長？
+                    Q6：尋找黃金店面，是總部負責還是我自己找？
                     <i class="fa-solid fa-chevron-down icon-toggle"></i>
                 </div>
                 <div class="accordion-body">
                     <div class="accordion-content">
-                        <strong>A：</strong> 開幕前我們將安排為期 10 天的密集實戰培訓（包含 2 ~4名受訓名額）。從後廚高湯熬製、出餐動線、到前場服務與 POS 系統操作，必須通過總部的技術測驗與評鑑才能正式營業，<span class="highlight-text">開幕後更有專業講師駐店輔導至少五天</span>，確保您的店鋪一開幕就具備高水準。
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <div class="accordion-header">
-                    Q9：開幕後，原物料是總部統一配送嗎？
-                    <i class="fa-solid fa-chevron-down icon-toggle"></i>
-                </div>
-                <div class="accordion-body">
-                    <div class="accordion-content">
-                        <strong>A：</strong> 是的。核心原物料（如獨家湯底、秘製醬汁、肉品等）皆由總部中央廚房統一配送，確保全台口味一致，並大幅省去您在店內熬湯備料的龐大時間與人力成本。
-                    </div>
-                </div>
-            </div>
-
-            <div class="category-title"><i class="fa-solid fa-arrow-trend-up"></i> 五、 獲利與未來發展</div>
-
-            <div class="accordion-item">
-                <div class="accordion-header">
-                    Q10：賣拉麵利潤好嗎？大概多久能回本？
-                    <i class="fa-solid fa-chevron-down icon-toggle"></i>
-                </div>
-                <div class="accordion-body">
-                    <div class="accordion-content">
-                        <strong>A：</strong> 小柑橘的財務模型經過精算，擁有極佳的獲利結構。每日僅需賣出約 66 碗即可達到損益平衡；在穩定營運下，預估營運淨利率高達 23.2% - 28.5%，<span class="highlight-text">最快約 11.7 個月</span>即可回收初期投資成本。
+                        <strong>A：</strong> 找尋舞台，我們與您共同當責。無論是您屬意的潛力商圈，或是總部手上評估過的優質立地，我們都會運用科學化的數據，與您一起探討人流與租金效益，陪您做出最安穩的選址決策。
                     </div>
                 </div>
             </div>
 
             <div class="accordion-item">
                 <div class="accordion-header">
-                    Q11：品牌未來的發展規劃是什麼？
+                    Q7：未來總部會不會在我附近又開一家店，造成競爭？
                     <i class="fa-solid fa-chevron-down icon-toggle"></i>
                 </div>
                 <div class="accordion-body">
                     <div class="accordion-content">
-                        <strong>A：</strong> 小柑橘是一個立足台灣、放眼國際的品牌。除了深耕台灣市場，我們也已正式啟動海外展店計畫。您加入的不是一間地區性小店，而是一個正準備爆發、具備跨國成長潛力的強勢餐飲品牌。
+                        <strong>A：</strong> 請絕對放心，<span class="highlight-text">「一行政區僅一店」</span>是我們寫在合約裡的堅定承諾。我們堅持把市場與利潤完整保留給您，拒絕無謂的品牌內耗，我們只做共好，讓您能安心深耕在地客群。
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-title"><i class="fa-solid fa-people-group"></i> 四、 當責支援：培訓與營運</div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    Q8：開幕前，總部會提供什麼樣的培訓與協助？
+                    <i class="fa-solid fa-chevron-down icon-toggle"></i>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <strong>A：</strong> 開幕前，總部會安排為期 10 天的密集實戰，帶領您與團隊熟悉每一個細節。不僅如此，開幕後我們更會派駐專業講師輔導至少五天。總部肩負起品牌營運的責任，絕不讓您單打獨鬥。
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    Q9：為了確保品質，原物料是由總部統一配送嗎？
+                    <i class="fa-solid fa-chevron-down icon-toggle"></i>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <strong>A：</strong> 是的。為了守護品質與您的寶貴時間，獨家果香湯底與秘製醬汁等核心原物料，皆由中央廚房嚴格把關並統一配送。您可以將省下的熬湯備料心力，專注於款待每一位走進店裡的顧客。
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-title"><i class="fa-solid fa-chart-line"></i> 五、 佈局未來：獲利與願景</div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    Q10：這份事業的利潤空間好嗎？大概多久能回本？
+                    <i class="fa-solid fa-chevron-down icon-toggle"></i>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <strong>A：</strong> 小柑橘的商業模型經過反覆淬鍊，每日僅需賣出約 66 碗即可達到損益平衡。在總部的強力支援與您的用心經營下，預估營運淨利極佳，<span class="highlight-text">最快約 11.7 個月</span>就能看見實質回報，穩健踏實。
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    Q11：小柑橘未來的品牌願景與發展規劃是什麼？
+                    <i class="fa-solid fa-chevron-down icon-toggle"></i>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <strong>A：</strong> 我們從台灣深耕出發，但目光始終放眼國際。目前，前進東南亞（如越南河內）的海外戰略計畫已正式啟動。加入小柑橘，您參與的不只是一間店，而是一個具備跨國潛力與宏大願景的品牌故事。
                     </div>
                 </div>
             </div>
@@ -311,18 +317,18 @@
     </div>
 
     <script>
-        // 加入互動點擊效果
+        // 互動點擊效果：展開與收合
         document.querySelectorAll('.accordion-header').forEach(button => {
             button.addEventListener('click', () => {
                 const accordionItem = button.parentElement;
                 
-                // 關閉其他已展開的項目 (若希望保持多個展開，可註解這段)
+                // 關閉其他已展開的項目
                 const currentActive = document.querySelector('.accordion-item.active');
                 if(currentActive && currentActive !== accordionItem) {
                     currentActive.classList.remove('active');
                 }
 
-                // 切換目前的項目狀態
+                // 切換點擊項目的狀態
                 accordionItem.classList.toggle('active');
             });
         });
